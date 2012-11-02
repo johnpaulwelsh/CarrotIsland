@@ -1,40 +1,42 @@
 #!/usr/bin/python
-from Tkinter import *
+# -*- coding: utf-8 -*-
 
-def create_main():
-    # Creates title
-    frame1 = Frame(top, relief=GROOVE, borderwidth=2)
-    label1 = Label(frame1, text='Thomas Edison: Paranormal Inquisitor', font=('Arial', 48), fg="blue")
-    label1.pack(side="left")
-    
-    # Creates window
-    top.create_window(540, 300, window=frame1, anchor=SE)
-    top.pack(fill="full", expand="yes")
-    
-    # Creates start button
-    frame2 = Frame(top, relief=GROOVE, borderwidth=2)
-    button1 = Button(frame2, text='Start', command=go_game, font=('Arial', 28), fg="blue")
-    button1.pack(side="left")
-    
-    top.create_window(457, 450, window=frame2, anchor=SE)
-    top.pack(fill='both', expand='yes')
-    
-    # Creates option button
-    frame3 = Frame(top, relief=GROOVE, borderwidth=2)
-    button2 = Button(frame3, text='Options', command=go_options, font=('Arial', 28), fg="blue")
-    button2.pack(side="left")
-    
-    top.create_window(480, 550, window=frame3, anchor=SE)
-    top.pack(fill='both', expand='yes')
-    
-    #Creates exit button
-    frame5 = Frame(top, relief=GROOVE, borderwidth=2)
-    button4 = Button(frame5, text='Quit',command=quit, font=('Arial', 28), fg="blue")
-    button4.pack(side="left")
-    
-    top.create_window(455, 750, window=frame5, anchor=SE)
-    top.pack(fill='both', expand='yes')
-    
-    return top
+"""
+ZetCode Tkinter tutorial
 
-# Still needs a lot more
+This script shows a simple window
+on the screen.
+
+author: Jan Bodnar
+last modified: January 2011
+website: www.zetcode.com
+"""
+
+from Tkinter import Tk, Frame, BOTH
+
+
+class Example(Frame):
+  
+    def __init__(self, parent):
+        Frame.__init__(self, parent, background="black")   
+         
+        self.parent = parent
+        
+        self.initUI()
+    
+    def initUI(self):
+      
+        self.parent.title("Thomas Edison : Paranormal Inquisitor")
+        self.pack(fill=BOTH, expand=1)
+        
+
+def main():
+  
+    root = Tk()
+    root.geometry("960x540+300+300")
+    app = Example(root)
+    root.mainloop()  
+
+
+if __name__ == '__main__':
+    main()
