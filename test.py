@@ -59,9 +59,6 @@ class Window(Frame):
         the Option Button. 
         """
     def optionUI(self):
-        playButton = Button(self, text="Play",
-                            command=self.quit)
-        playButton.size = 0
         
         self.parent.title("Thomas Edison : Paranormal Inquisitor")
         self.style = Style()
