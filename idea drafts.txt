@@ -8,10 +8,12 @@ Overall layout
 idea
 
 TODO:
-SQL Database
-JQuery Ideas
+Research Google Books API (Anthony)
+Javascript Research (Wubzy)
+PHP Backend (Melichar)
+JQuery Ideas (Melichar)
 Register pages*
 Contact pages*
 
 
-* = includes backend
+* = includes backend and front end
