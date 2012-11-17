@@ -53,3 +53,35 @@ EXAMPLE: GET http://www.googleapis.com/books/v1/volumes?q=quilting
 callback query parameter
 callback function
 Look at apitest.html
+
+*****Performing a search
+?q=search+terms
+?q - searches for volumes containing text string
+intitle: returns results for keywords
+inauthor: returns authors of books
+inpublisher: dur
+subject: keyword dur
+isbn: THIS IS IMPORTANT **** NEED THIS
+lccn: library of congress control number wtfbbqthisexistsiwanttoruletheworld
+oclc: online computer library center
+
+EXAMPLE: Daniel Keyes' "Flowers for Algernon":
+GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes
+will return a bunch of code such as:
+ID
+etag
+selfLink
+VolumeInfo
+	{
+		authors
+		title
+		ect.
+	}
+
+*****optional fields
+full - returns all volume fields
+lite - returns only certain fields, double asterisks in Volume reference
+->Might want to use lite to only return things like title, author, edition, isbn, picture, buylink, price
+GET https://www.googleapis.com/books/v1/volumes?q=flowers&projection=lite
+
+By default, volumes search returns maxResults ordered by relevance.
