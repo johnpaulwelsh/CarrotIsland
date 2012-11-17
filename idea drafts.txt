@@ -1,0 +1,17 @@
+......Carrot Island Development......
+
+IDEA: Marist Trading Post
+
+DONE:
+Website Framework idea
+Overall layout
+idea
+
+TODO:
+SQL Database
+JQuery Ideas
+Register pages*
+Contact pages*
+
+
+* = includes backend
